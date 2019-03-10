@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/reacti-juttu/static/js/runtime~main.76a770f8.js"
   },
   {
-    "revision": "d2e2c99e89c412723327",
-    "url": "/reacti-juttu/static/js/main.d15fb18a.chunk.js"
+    "revision": "66e40688f529df3c001d",
+    "url": "/reacti-juttu/static/js/main.1fa08fda.chunk.js"
   },
   {
-    "revision": "ba264cd90c4d36546d5a",
-    "url": "/reacti-juttu/static/js/2.8f71a45e.chunk.js"
+    "revision": "782431a7a9fd8d41f546",
+    "url": "/reacti-juttu/static/js/2.8b2938bc.chunk.js"
   },
   {
-    "revision": "d2e2c99e89c412723327",
+    "revision": "66e40688f529df3c001d",
     "url": "/reacti-juttu/static/css/main.8b05262e.chunk.css"
   },
   {
-    "revision": "c253683f0b60536be592dcbc37359f23",
+    "revision": "c4c1a11a5217962dfb2a94280d96adc1",
     "url": "/reacti-juttu/index.html"
   }
 ];
