@@ -1,14 +1,13 @@
 {
-  "main.css": "/reacti-juttu/static/css/main.8b05262e.chunk.css",
-  "main.js": "/reacti-juttu/static/js/main.1fa08fda.chunk.js",
-  "main.js.map": "/reacti-juttu/static/js/main.1fa08fda.chunk.js.map",
+  "main.css": "/reacti-juttu/static/css/main.d122e87f.chunk.css",
+  "main.js": "/reacti-juttu/static/js/main.44af1576.chunk.js",
+  "main.js.map": "/reacti-juttu/static/js/main.44af1576.chunk.js.map",
   "runtime~main.js": "/reacti-juttu/static/js/runtime~main.76a770f8.js",
   "runtime~main.js.map": "/reacti-juttu/static/js/runtime~main.76a770f8.js.map",
-  "static/js/2.8b2938bc.chunk.js": "/reacti-juttu/static/js/2.8b2938bc.chunk.js",
-  "static/js/2.8b2938bc.chunk.js.map": "/reacti-juttu/static/js/2.8b2938bc.chunk.js.map",
+  "static/js/2.bedde400.chunk.js": "/reacti-juttu/static/js/2.bedde400.chunk.js",
+  "static/js/2.bedde400.chunk.js.map": "/reacti-juttu/static/js/2.bedde400.chunk.js.map",
   "index.html": "/reacti-juttu/index.html",
-  "precache-manifest.510645fc0ee05d7db73f4488237023c3.js": "/reacti-juttu/precache-manifest.510645fc0ee05d7db73f4488237023c3.js",
+  "precache-manifest.900453af2b192ddff3441b10c5e2198b.js": "/reacti-juttu/precache-manifest.900453af2b192ddff3441b10c5e2198b.js",
   "service-worker.js": "/reacti-juttu/service-worker.js",
-  "static/css/main.8b05262e.chunk.css.map": "/reacti-juttu/static/css/main.8b05262e.chunk.css.map",
-  "static/media/logo.svg": "/reacti-juttu/static/media/logo.5d5d9eef.svg"
+  "static/css/main.d122e87f.chunk.css.map": "/reacti-juttu/static/css/main.d122e87f.chunk.css.map"
 }
