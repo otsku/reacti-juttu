@@ -16,7 +16,9 @@ class App extends React.Component {
 	}
 	
 	componentDidMount() {
-		this.fetchPics();
+		if(this.state.id === null) {
+			this.fetchPics();
+		}	
 	}
 
 	fetchPics() {
@@ -35,8 +37,8 @@ class App extends React.Component {
 			.catch(error => this.setState({ error, isLoading: false }));
 	}
 
-	handleClick(id) {
-		this.setState({id: id});
+	handleClick(pic) {
+		this.setState({id: pic});
 		this.setState({Details: true});
 	}
 
@@ -52,7 +54,7 @@ class App extends React.Component {
 			padding: '4px 1px 4px 1px',
   			margin: 'auto',
 		};
-		if(this.state.Details == true) {
+		if(this.state.Details === true) {
 			return(<Details pic={this.state.id} />);
 		}
 		return (
@@ -82,25 +84,72 @@ class App extends React.Component {
 class Details extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {}
+		this.state = {
+			Loading: true,
+			pic: [],
+			errors: null,
+			Details: true
+		}
+		this.handleClick = this.handleClick.bind(this);
 	}
 
 	componentDidMount() {
-		const url = 'https://jsonplaceholder.typicode.com/photos?id=' + this.props.pics;
+		this.fetchPics();
+	}
+
+	fetchPics() {
+		// Where we're fetching data from
+		const url = 'https://jsonplaceholder.typicode.com/photos?id=' + this.props.pic;
 		console.log(url);
-		axios.get(url)
-    	.then(response => this.setState(response.data))
+		fetch(url)
+			// We get the API response and receive data in JSON format...
+			.then(response => response.json())
+			// ...then we update the users state
+			.then(data =>
+				this.setState({
+				pic: data,
+				Loading: false,
+				})
+			)
+			// Catch any errors we hit and update the app
+			.catch(errors => this.setState({ errors, Loading: false }));
+	}
+
+	handleClick() {
+		this.setState({Details: false});
 	}
 
 	render() {
-		if(!this.props.title) {
-			return <h3>Loading...</h3>
-		  }
-		  return (
-			<article>
-			  <h1>{this.props.title}</h1>
-			</article>
-		  );
+		const { Loading, pic, errors } = this.state;
+		const back = {
+			top: '0px',
+		};
+		if(this.state.Details === false) {
+			return(<App/>);
+		}
+		return (
+		 	<React.Fragment>
+				<h1>Pictures</h1>
+				<div>
+				{errors ? <p>{errors.message}</p> : null}
+				{!Loading ? (
+					pic.map(user => {
+						const { id, url, title } = user;
+						return (
+							<div key={id}>
+								<button style={back} onClick={this.handleClick} >Back</button>
+								<img value={id} src={url}/>
+								<p>{title}</p>
+							</div>
+						);
+					})
+				// If there is a delay in data, let's let the user know it's loading
+				) : (
+					<h3>Loading...</h3>
+				)}
+				</div>
+		  	</React.Fragment>
+		);
 	}
 }
 
