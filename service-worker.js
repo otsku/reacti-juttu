@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/reacti-juttu/precache-manifest.1634ee69225a60201532f8a63f805733.js"
+  "/reacti-juttu/precache-manifest.9521f5f48fbadfe570ddb6388cfa95f8.js"
 );
 
 workbox.clientsClaim();
