@@ -1,0 +1,15 @@
+body, html {
+	background: url("kuvat/background.png") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#header {
+	border-style:solid;
+	width:66.8%;
+	margin-left:16.6%;
+	margin-right:16.6%;
+	margin-top:5%;
+}
